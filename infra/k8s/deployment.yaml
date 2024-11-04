@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zepra-crm-apis-coll-0d29d6fc92584f668b0a7c738476ae52-depl
+  labels:
+    app: zepra-crm-apis-coll-0d29d6fc92584f668b0a7c738476ae52
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zepra-crm-apis-coll-0d29d6fc92584f668b0a7c738476ae52
+  template:
+    metadata:
+      labels:
+        app: zepra-crm-apis-coll-0d29d6fc92584f668b0a7c738476ae52
+    spec:
+      containers:
+        - name: zepra-crm-apis-coll-0d29d6fc92584f668b0a7c738476ae52
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:zepra-crm-apis-coll-0d29d6fc92584f668b0a7c738476ae52
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9011

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: zepra-crm-apis-coll-0d29d6fc92584f668b0a7c738476ae52-srv
+spec:
+  selector:
+    app: zepra-crm-apis-coll-0d29d6fc92584f668b0a7c738476ae52
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9011
+  type: LoadBalancer
